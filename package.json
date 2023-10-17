@@ -1,19 +1,15 @@
 {
-  "name": "landing-page",
+  "name": "Portfolio",
+  "description": "This the page where I showcase my history and frontend abilities",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
     "@types/three": "^0.154.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  },
-  "dependencies": {
-    "three": "^0.154.0"
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }

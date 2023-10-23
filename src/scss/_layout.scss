@@ -34,13 +34,24 @@ body {
       }
     }
   }
+
+  /*
+  Footer
+  */
   footer {
     flex: 0 1 40px;
+    padding: 4rem 2rem;
     background-color: $color-dark;
     color: white;
 
+    .headline {
+      margin: 2rem 0;
+    }
+
     li {
       font-weight: 300;
+      cursor: pointer;
+      margin: 1rem 0;
     }
   }
 }

@@ -18,7 +18,13 @@ module.exports = {
                 test: /\.(ts|tsx)$/i,
                 use: 'ts-loader',
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.(woff|woff2|ttf)$/,
+                use: {
+                    loader: 'url-loader',
+                },
+            },
         ],
     },
     resolve: { extensions: ['.ts', '.js'] },

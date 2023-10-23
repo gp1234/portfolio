@@ -12,3 +12,4 @@ I will start with a barebone approach adding things piece by piece. ⌛️
 
 I will explore on Figma what I want to create for my portafolio through definitions of myself, what I want to show and some of my writings.
 Aside from that I will describe the proccess for UI. [Giovanni Design Process 👨🏻‍🎨](https://www.figma.com/file/QgBolbGZQr9H28y42PjCvn/Portfolio-Design?type=design&node-id=0%3A1&mode=design&t=nWV0UCe4G19H8pcG-1)
+ 

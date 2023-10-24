@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 cp --recursive ./build s3://www.giovannipoveda51.com
+      - aws cloudfront create-invalidation --distribution-id E1FVU0BBN6S8M8 --path /\*
+      - aws cloudfront create-invalidation --distribution-id E2LHBNBKRUJ4YF --path /\*

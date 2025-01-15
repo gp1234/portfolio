@@ -2,7 +2,7 @@
   "name": "gio-portfolio",
   "description": "This the page where I showcase my history and frontend abilities",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"

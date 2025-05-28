@@ -2,15 +2,40 @@ html,
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden; /* Hide scrollbars if sphere goes slightly out of bounds */
+}
+
+/* 3D Sphere Background */
+#sphere-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5; /* Above background but below text */
+  overflow: hidden;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
 }
 
 .content {
+  position: relative;
+  z-index: 10; /* Ensure content is on top of sphere */
   display: flex;
   flex-flow: column;
   height: 100%;
   .hero {
     padding: 4rem 2rem;
-    background-color: $principal_color;
+    background-color: rgba(
+      0,
+      26,
+      27,
+      0.3
+    ); /* Semi-transparent background to show sphere */
     height: max-content;
     flex: 1 1 auto;
     * {
@@ -19,6 +44,8 @@ body {
     &_content {
       color: white;
       font-weight: 300;
+      position: relative;
+      z-index: 15; /* Ensure text is above sphere */
       .word {
         opacity: 0;
         &--hightlight {
@@ -41,8 +68,15 @@ body {
   footer {
     flex: 0 1 40px;
     padding: 4rem 2rem;
-    background-color: $color-dark;
+    background-color: rgba(
+      26,
+      31,
+      28,
+      0.8
+    ); /* Semi-transparent background to show sphere */
     color: white;
+    position: relative;
+    z-index: 15; /* Ensure footer content is above sphere */
 
     .headline {
       margin: 2rem 0;

@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "src",
+  base: "/portfolio/", // ✅ Add this line
   build: {
     outDir: "../dist",
     emptyOutDir: true,
@@ -12,9 +13,7 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      scss: {
-        // You can add global SCSS variables here if needed
-      },
+      scss: {},
     },
   },
 });

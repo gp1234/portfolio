@@ -1,14 +1,27 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 18
   pre_build:
     commands:
-      - npm install
+      - echo Build started on `date`
+      - echo Installing dependencies...
+      - npm ci
   build:
     commands:
+      - echo Build phase started on `date`
+      - echo Running Vite build...
       - npm run build
+      - echo Build completed, checking dist folder...
+      - ls -la dist/
   post_build:
     commands:
+      - echo Deployment phase started on `date`
+      - echo Uploading to S3...
       - aws s3 cp --recursive ./dist s3://www.giovannipoveda51.com
+      - echo Invalidating CloudFront cache...
       - aws cloudfront create-invalidation --distribution-id E1FVU0BBN6S8M8 --path /\*
       - aws cloudfront create-invalidation --distribution-id E2LHBNBKRUJ4YF --path /\*
+      - echo Deployment completed on `date`

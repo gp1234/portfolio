@@ -3,6 +3,10 @@
   "description": "This the page where I showcase my history and frontend abilities",
   "private": true,
   "version": "0.0.2",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,7 +21,6 @@
   "dependencies": {
     "gsap": "^3.12.2",
     "three": "^0.157.0",
-    "three-orbitcontrols-ts": "^0.1.2",
     "three-stdlib": "^2.36.0"
   }
 }

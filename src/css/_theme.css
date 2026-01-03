@@ -1,0 +1,13 @@
+@layer theme {
+  :root {
+    --principal-color: #001a1b;
+    --secondary-color: #00bcc5;
+    --tertiary-color: #f4e86b;
+    --color-dark: #1a1f1c;
+    --accent-1: #94a1e6;
+    --accent-2: #d5ffff;
+    --accent-3: #3f318b;
+    --complementary: #cb4397;
+    --white-color: #ffffff;
+  }
+}

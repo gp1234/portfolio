@@ -1,0 +1,115 @@
+@layer layout {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* 3D Sphere Background */
+  #sphere-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    overflow: hidden;
+
+    & canvas {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+
+    & .hero {
+      padding: 4rem 2rem;
+      height: max-content;
+      flex: 1 1 auto;
+
+      & * {
+        font-size: 3.6rem;
+      }
+
+      & .hero_content {
+        color: white;
+        font-weight: 300;
+        position: relative;
+        z-index: 15;
+
+        & .word {
+          opacity: 0;
+        }
+
+        & .word--hightlight {
+          color: var(--tertiary-color);
+          font-weight: normal;
+        }
+      }
+
+      & .attributes {
+        position: relative;
+
+        & .attributes-elements {
+          position: absolute;
+        }
+      }
+    }
+
+    & nav {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px) saturate(120%);
+      -webkit-backdrop-filter: blur(14px) saturate(120%);
+      padding: 2rem 2rem;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 768px) {
+        justify-content: space-between;
+      }
+
+      font-weight: 100;
+
+      ol {
+        & > li {
+          display: inline-block;
+          margin-left: 2rem;
+        }
+      }
+
+      & a {
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: 2rem;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+
+        @media (max-width: 768px) {
+          font-size: 1.8rem;
+        }
+      }
+      &:has(a:hover) a:not(:hover) {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+      & a:hover {
+        color: var(--tertiary-color);
+      }
+    }
+  }
+
+  footer,
+  section {
+    padding: 1rem 2rem;
+  }
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giovanni Poveda Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
     <style>
       body {
         display: none;
@@ -16,25 +17,8 @@
     <div id="sphere-container"></div>
 
     <div class="content">
-      <section class="hero">
-        <h1 class="hero_content">
-          <span class="word">Hey</span>
-          <span class="word">I</span>
-          <span class="word">am</span>
-          <span class="word word--hightlight">Giovanni</span>
-          <span class="word">a</span>
-          <div class="attributes">
-            <span class="attributes-elements"> Software Engineer <br /></span>
-            <span class="attributes-elements"> Blogger <br /></span>
-            <span class="attributes-elements"> Designer <br /></span>
-            <span class="attributes-elements"> AI Student <br /></span>
-          </div>
-        </h1>
-      </section>
-
-      <footer>
-        <h3 class="headline">Contact</h3>
-        <ul>
+      <nav>
+        <ol>
           <li>
             <a
               rel="noopener noreferrer"
@@ -43,6 +27,7 @@
               >Github</a
             >
           </li>
+
           <li>
             <a
               rel="noopener noreferrer"
@@ -59,8 +44,26 @@
               >Medium</a
             >
           </li>
-        </ul>
-      </footer>
+          <li>
+            <a href="/">Blog</a>
+          </li>
+        </ol>
+      </nav>
+      <section class="hero">
+        <h1 class="hero_content">
+          <span class="word">Hey</span>
+          <span class="word">I</span>
+          <span class="word">am</span>
+          <span class="word word--hightlight">Giovanni</span>
+          <span class="word">a</span>
+          <div class="attributes">
+            <span class="attributes-elements">Software Engineer</span>
+            <span class="attributes-elements">Blogger</span>
+            <span class="attributes-elements">Designer</span>
+            <span class="attributes-elements">AI Student</span>
+          </div>
+        </h1>
+      </section>
     </div>
     <script type="module" src="/ts/main.ts"></script>
   </body>
